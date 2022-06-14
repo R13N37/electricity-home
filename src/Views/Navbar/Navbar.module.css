@@ -1,0 +1,6 @@
+.languageSelect{
+    display: flex;
+    position: absolute;
+    right: 450px;
+    bottom: 5px;
+}

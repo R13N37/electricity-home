@@ -1,25 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import Navbar from "./Views/Navbar/Navbar";
+import HomeContent from "./Views/HomeContent/HomeContent";
+import Footer from "./Views/Footer/Footer";
+
+import { LanguageProvider } from "./context/LanguageContext";
+import { Languages } from "./Views/LanguageSettings/LanguageSettings.model";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <LanguageProvider language={Languages.English}>
+      <div>
+      <Navbar></Navbar>
+      <HomeContent></HomeContent>
+      <Footer></Footer>
+      </div>
+      </LanguageProvider>
   );
 }
 
